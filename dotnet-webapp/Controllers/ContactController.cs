@@ -42,8 +42,8 @@ namespace dotnet_webapp.Controllers
         }
 
         // PUT api/<ContactController>/5
-        [HttpPut("{id}")]
-        public ActionResult<IEnumerable<Contact>> Put(int id, Contact updatedContact)
+        [HttpPatch("{id}")]
+        public ActionResult<IEnumerable<Contact>> Patch(int id, Contact updatedContact)
         {
             Contact contact = contacts.FirstOrDefault(c => c.Id == id);
             if (contact == null)
